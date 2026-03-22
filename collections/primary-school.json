@@ -1,0 +1,77 @@
+{
+  "name": "Primary School Collection",
+  "description": "Essential educational content for primary school students (ages 6-11)",
+  "target_audience": "Primary Schools (Grades 1-5)",
+  "estimated_size_gb": 15,
+  "subjects": [
+    "Mathematics",
+    "Science",
+    "English Language",
+    "Social Studies",
+    "Environmental Studies"
+  ],
+  "content_items": [
+    {
+      "name": "Wikipedia for Schools",
+      "description": "Age-appropriate Wikipedia articles curated for primary students",
+      "zim_url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_schools_2024-06.zim",
+      "size_gb": 3,
+      "subject": "General Knowledge"
+    },
+    {
+      "name": "Khan Academy Primary Math",
+      "description": "Interactive math lessons and exercises for grades 1-5",
+      "platform": "kolibri",
+      "size_gb": 2,
+      "subject": "Mathematics"
+    },
+    {
+      "name": "Science for Kids",
+      "description": "Basic science concepts and experiments for young learners",
+      "zim_url": "https://download.kiwix.org/zim/other/science_for_kids_2024-06.zim",
+      "size_gb": 2,
+      "subject": "Science"
+    },
+    {
+      "name": "English Learning Resources",
+      "description": "English grammar, vocabulary, and reading comprehension",
+      "zim_url": "https://download.kiwix.org/zim/other/english_learning_primary_2024-06.zim",
+      "size_gb": 2,
+      "subject": "English Language"
+    },
+    {
+      "name": "Environmental Studies",
+      "description": "Environmental awareness and sustainability education",
+      "zim_url": "https://download.kiwix.org/zim/other/environmental_studies_2024-06.zim",
+      "size_gb": 1,
+      "subject": "Environmental Studies"
+    },
+    {
+      "name": "Children's Story Books",
+      "description": "Collection of classic children's literature and stories",
+      "zim_url": "https://download.kiwix.org/zim/other/children_stories_2024-06.zim",
+      "size_gb": 3,
+      "subject": "English Language"
+    },
+    {
+      "name": "World Atlas for Children",
+      "description": "Simplified world geography and cultural information",
+      "zim_url": "https://download.kiwix.org/zim/other/world_atlas_children_2024-06.zim",
+      "size_gb": 2,
+      "subject": "Social Studies"
+    }
+  ],
+  "setup_instructions": {
+    "installation_time_minutes": 45,
+    "technical_requirements": "Basic Plan specifications",
+    "teacher_training_needed": true,
+    "parent_involvement": "Recommended"
+  },
+  "learning_outcomes": [
+    "Improved reading comprehension",
+    "Basic mathematical skills development",
+    "Scientific thinking and curiosity",
+    "Environmental awareness",
+    "Digital literacy foundation"
+  ]
+}

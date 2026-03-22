@@ -31,41 +31,41 @@ const MAPS_ITEM = {
 // System items shown after all apps
 const SYSTEM_ITEMS = [
   {
-    label: 'Easy Setup',
+    label: 'School Setup',
     to: '/easy-setup',
     target: '',
     description:
-      'Not sure where to start? Use the setup wizard to quickly configure your N.O.M.A.D.!',
+      'New to Offline School Server? Use our setup wizard to quickly configure your school\'s digital learning environment!',
     icon: <IconBolt size={48} />,
     installed: true,
     displayOrder: 50,
     poweredBy: null,
   },
   {
-    label: 'Install Apps',
+    label: 'Install Learning Tools',
     to: '/settings/apps',
     target: '',
-    description: 'Not seeing your favorite app? Install it here!',
+    description: 'Add educational apps, digital libraries, and teaching tools to your school server!',
     icon: <IconPlus size={48} />,
     installed: true,
     displayOrder: 51,
     poweredBy: null,
   },
   {
-    label: 'Docs',
+    label: 'Teacher Guides',
     to: '/docs/home',
     target: '',
-    description: 'Read Project N.O.M.A.D. manuals and guides',
+    description: 'Learn how to use Offline School Server for effective teaching and learning',
     icon: <IconHelp size={48} />,
     installed: true,
     displayOrder: 52,
     poweredBy: null,
   },
   {
-    label: 'Settings',
+    label: 'School Settings',
     to: '/settings/system',
     target: '',
-    description: 'Configure your N.O.M.A.D. settings',
+    description: 'Configure your school server settings and manage user access',
     icon: <IconSettings size={48} />,
     installed: true,
     displayOrder: 53,
@@ -133,12 +133,23 @@ export default function Home(props: {
 
   return (
     <AppLayout>
-      <Head title="Command Center" />
+      <Head title="School Dashboard" />
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 mx-4">
+        <div className="flex">
+          <div className="ml-3">
+            <p className="text-sm text-blue-700">
+              <strong>Welcome to your INR99 Offline School Server!</strong> Transform your school with 
+              digital learning that works without internet connectivity. Perfect for rural schools 
+              and areas with limited internet access.
+            </p>
+          </div>
+        </div>
+      </div>
       {
         updateInfo?.updateAvailable && (
           <div className='flex justify-center items-center p-4 w-full'>
             <Alert
-              title="An update is available for Project N.O.M.A.D.!"
+              title="An update is available for your INR99 Offline School Server!"
               type="info-inverted"
               variant="solid"
               className="w-full"
@@ -156,19 +167,19 @@ export default function Home(props: {
       }
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {items.map((item) => {
-          const isEasySetup = item.label === 'Easy Setup'
-          const shouldHighlight = isEasySetup && shouldHighlightEasySetup
+          const isSchoolSetup = item.label === 'School Setup'
+          const shouldHighlight = isSchoolSetup && shouldHighlightEasySetup
 
           return (
             <a key={item.label} href={item.to} target={item.target}>
-              <div className="relative rounded border-desert-green border-2 bg-desert-green hover:bg-transparent hover:text-text-primary text-white transition-colors shadow-sm h-48 flex flex-col items-center justify-center cursor-pointer text-center px-4">
+              <div className="relative rounded border-blue-600 border-2 bg-blue-600 hover:bg-transparent hover:text-text-primary text-white transition-colors shadow-sm h-48 flex flex-col items-center justify-center cursor-pointer text-center px-4">
                 {shouldHighlight && (
                   <span className="absolute top-2 right-2 flex items-center justify-center">
                     <span
-                      className="animate-ping absolute inline-flex w-16 h-6 rounded-full bg-desert-orange-light opacity-75"
+                      className="animate-ping absolute inline-flex w-16 h-6 rounded-full bg-orange-400 opacity-75"
                       style={{ animationDuration: '1.5s' }}
                     ></span>
-                    <span className="relative inline-flex items-center rounded-full px-2.5 py-1 bg-desert-orange-light text-xs font-semibold text-white shadow-sm">
+                    <span className="relative inline-flex items-center rounded-full px-2.5 py-1 bg-orange-400 text-xs font-semibold text-white shadow-sm">
                       Start here!
                     </span>
                   </span>

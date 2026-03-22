@@ -1,0 +1,77 @@
+{
+  "name": "Teacher Resources Collection",
+  "description": "Professional development and teaching resources for educators",
+  "target_audience": "Teachers and School Administrators",
+  "estimated_size_gb": 8,
+  "resource_categories": [
+    "Lesson Planning",
+    "Teaching Methodologies",
+    "Assessment Tools",
+    "Classroom Management",
+    "Professional Development",
+    "Educational Technology"
+  ],
+  "content_items": [
+    {
+      "name": "Teaching Methodologies Guide",
+      "description": "Modern teaching strategies and pedagogical approaches",
+      "zim_url": "https://download.kiwix.org/zim/other/teaching_methods_2024-06.zim",
+      "size_gb": 1,
+      "category": "Teaching Methodologies"
+    },
+    {
+      "name": "Lesson Plan Templates",
+      "description": "Ready-to-use lesson plan templates for all subjects",
+      "zim_url": "https://download.kiwix.org/zim/other/lesson_plans_2024-06.zim",
+      "size_gb": 2,
+      "category": "Lesson Planning"
+    },
+    {
+      "name": "Assessment and Evaluation Tools",
+      "description": "Formative and summative assessment strategies",
+      "zim_url": "https://download.kiwix.org/zim/other/assessment_tools_2024-06.zim",
+      "size_gb": 1,
+      "category": "Assessment Tools"
+    },
+    {
+      "name": "Classroom Management Strategies",
+      "description": "Effective classroom management techniques",
+      "zim_url": "https://download.kiwix.org/zim/other/classroom_management_2024-06.zim",
+      "size_gb": 1,
+      "category": "Classroom Management"
+    },
+    {
+      "name": "Educational Technology Integration",
+      "description": "Guide to integrating technology in teaching",
+      "zim_url": "https://download.kiwix.org/zim/other/edtech_integration_2024-06.zim",
+      "size_gb": 1,
+      "category": "Educational Technology"
+    },
+    {
+      "name": "Professional Development Resources",
+      "description": "Continuous learning materials for educators",
+      "zim_url": "https://download.kiwix.org/zim/other/teacher_development_2024-06.zim",
+      "size_gb": 2,
+      "category": "Professional Development"
+    }
+  ],
+  "setup_instructions": {
+    "installation_time_minutes": 30,
+    "technical_requirements": "Basic Plan sufficient",
+    "teacher_training_needed": false,
+    "self_paced_learning": true
+  },
+  "benefits": [
+    "Improved teaching effectiveness",
+    "Reduced lesson preparation time",
+    "Better student engagement strategies",
+    "Professional growth opportunities",
+    "Access to best practices"
+  ],
+  "usage_recommendations": {
+    "daily_use": "Lesson planning and reference",
+    "weekly_use": "Professional development reading",
+    "monthly_use": "Assessment strategy review",
+    "collaborative_use": "Share with teaching colleagues"
+  }
+}

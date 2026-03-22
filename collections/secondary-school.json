@@ -1,0 +1,106 @@
+{
+  "name": "Secondary School Collection",
+  "description": "Comprehensive educational content for secondary school students (ages 11-18)",
+  "target_audience": "Secondary Schools (Grades 6-12)",
+  "estimated_size_gb": 35,
+  "subjects": [
+    "Mathematics",
+    "Science (Physics, Chemistry, Biology)",
+    "English Literature",
+    "Social Studies (History, Geography, Civics)",
+    "Computer Science",
+    "Economics",
+    "Exam Preparation"
+  ],
+  "content_items": [
+    {
+      "name": "Complete Wikipedia",
+      "description": "Full Wikipedia with advanced articles for secondary students",
+      "zim_url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_2024-06.zim",
+      "size_gb": 12,
+      "subject": "General Knowledge"
+    },
+    {
+      "name": "Khan Academy Complete",
+      "description": "Full Khan Academy curriculum including math, science, and test prep",
+      "platform": "kolibri",
+      "size_gb": 8,
+      "subject": "Multiple Subjects"
+    },
+    {
+      "name": "Physics Textbook Collection",
+      "description": "Comprehensive physics textbooks and interactive simulations",
+      "zim_url": "https://download.kiwix.org/zim/other/physics_textbooks_2024-06.zim",
+      "size_gb": 3,
+      "subject": "Science"
+    },
+    {
+      "name": "Chemistry Lab Manual",
+      "description": "Chemistry experiments, safety guides, and reference materials",
+      "zim_url": "https://download.kiwix.org/zim/other/chemistry_manual_2024-06.zim",
+      "size_gb": 2,
+      "subject": "Science"
+    },
+    {
+      "name": "Biology Encyclopedia",
+      "description": "Complete biology reference with diagrams and examples",
+      "zim_url": "https://download.kiwix.org/zim/other/biology_encyclopedia_2024-06.zim",
+      "size_gb": 3,
+      "subject": "Science"
+    },
+    {
+      "name": "English Literature Classics",
+      "description": "Collection of classic literature and literary analysis",
+      "zim_url": "https://download.kiwix.org/zim/other/english_literature_2024-06.zim",
+      "size_gb": 2,
+      "subject": "English Literature"
+    },
+    {
+      "name": "World History Encyclopedia",
+      "description": "Comprehensive world history from ancient to modern times",
+      "zim_url": "https://download.kiwix.org/zim/other/world_history_2024-06.zim",
+      "size_gb": 3,
+      "subject": "Social Studies"
+    },
+    {
+      "name": "Computer Science Fundamentals",
+      "description": "Introduction to programming, algorithms, and computer concepts",
+      "zim_url": "https://download.kiwix.org/zim/other/computer_science_2024-06.zim",
+      "size_gb": 2,
+      "subject": "Computer Science"
+    },
+    {
+      "name": "Economics and Business Studies",
+      "description": "Basic economics principles and business concepts",
+      "zim_url": "https://download.kiwix.org/zim/other/economics_basics_2024-06.zim",
+      "size_gb": 1,
+      "subject": "Economics"
+    },
+    {
+      "name": "Board Exam Preparation",
+      "description": "Exam preparation materials and practice tests",
+      "zim_url": "https://download.kiwix.org/zim/other/exam_preparation_2024-06.zim",
+      "size_gb": 1,
+      "subject": "Exam Preparation"
+    }
+  ],
+  "setup_instructions": {
+    "installation_time_minutes": 90,
+    "technical_requirements": "Standard Plan specifications recommended",
+    "teacher_training_needed": true,
+    "student_orientation": "Required"
+  },
+  "learning_outcomes": [
+    "Advanced subject mastery",
+    "Critical thinking development",
+    "Exam preparation success",
+    "Digital research skills",
+    "Independent learning capabilities"
+  ],
+  "exam_boards_supported": [
+    "CBSE",
+    "ICSE",
+    "State Boards",
+    "International Curricula"
+  ]
+}

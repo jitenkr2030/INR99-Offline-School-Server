@@ -1,83 +1,95 @@
-# Welcome to Project N.O.M.A.D.
+# Welcome to INR99 Offline School Server
 
-Your personal offline knowledge server is ready to use.
+Your school's digital learning platform is ready to transform education.
 
-## What is N.O.M.A.D.?
+## What is INR99 Offline School Server?
 
-**N.O.M.A.D.** stands for **Node for Offline Media, Archives, and Data**. It's your personal server for accessing knowledge, education, and AI assistance — even when you have no internet connection.
+**INR99 Offline School Server** is a comprehensive educational platform designed specifically for schools in areas with limited or unreliable internet connectivity. It brings digital learning, AI-powered teaching assistants, and vast educational resources to your students — all working completely offline.
 
-Think of it as having Wikipedia, Khan Academy, an AI assistant, and offline maps all in one place, running on hardware you control.
+Think of it as having your school's digital library, AI teaching assistant, learning platform, and educational tools all in one place, running on hardware you control.
 
-![Command Center Dashboard](/docs/dashboard.png)
+![School Dashboard](/docs/dashboard.png)
 
-## What Can You Do?
+## What Can Your School Do?
 
-### Browse Offline Knowledge
-Access millions of Wikipedia articles, medical references, how-to guides, and ebooks — all stored locally on your server. No internet required.
+### Access Digital Library
+Browse Wikipedia, textbooks, educational references, and learning materials — all stored locally on your server. Perfect for research projects, homework help, and independent learning.
 
-*Launch the Information Library from the home screen or the [Apps](/settings/apps) page.*
+*Launch the Digital Library from the home screen or the [Install Learning Tools](/settings/apps) page.*
 
-### Learn Something New
-Khan Academy courses covering math, science, economics, and more. Complete with videos and exercises, all available offline.
+### Interactive Learning Platform
+Khan Academy courses covering math, science, economics, and more. Complete with videos, exercises, and progress tracking — all available offline for every student.
 
-*Launch the Education Platform from the home screen or the [Apps](/settings/apps) page.*
+*Launch the Learning Platform from the home screen or the [Install Learning Tools](/settings/apps) page.*
 
-### Chat with AI
-Ask questions, get explanations, brainstorm ideas, or get help with writing. Your local AI assistant works completely offline — and you can upload documents to the Knowledge Base for document-aware responses.
+### AI Teaching Assistant
+Students can get 24/7 homework help, explanations, and learning support. Teachers can upload lesson plans, worksheets, and educational materials for AI-enhanced teaching.
 
-**[Open AI Chat →](/chat)**
+**[Open AI Teaching Assistant →](/chat)**
 
-### Upload Documents to the Knowledge Base
-Upload PDFs, text files, and other documents for the AI to reference. The Knowledge Base uses semantic search to find relevant information from your uploaded documents when you ask questions.
+### Create Educational Knowledge Base
+Upload textbooks, lesson plans, worksheets, and other educational materials. The AI uses semantic search to find relevant information from your school's curated content when students ask questions.
 
 **[Open Knowledge Base →](/knowledge-base)**
 
-### View Offline Maps
-Navigate and explore maps without an internet connection. Download regions you need before going offline.
+### Interactive Educational Maps
+Explore geography, learn about different regions, and engage with interactive map-based lessons — all without needing an internet connection.
 
 **[Open Maps →](/maps)**
 
-### Benchmark Your Hardware
-Run a System Benchmark to see how your hardware performs and compare your NOMAD Score with the community leaderboard.
+### Monitor System Performance
+Ensure your school server is running optimally for all students and teachers with built-in performance monitoring tools.
 
-**[Open Benchmark →](/settings/benchmark)**
-
----
-
-## Getting Started
-
-**New to N.O.M.A.D.?** Use the Easy Setup wizard to configure your server and download content collections.
-
-**[Run Easy Setup →](/easy-setup)**
-
-Or explore the **[Getting Started Guide](/docs/getting-started)** for a walkthrough of all features.
+**[Open System Info →](/settings/system)**
 
 ---
 
-## Quick Links
+## Setting Up Your School
+
+**New to INR99 Offline School Server?** Use the School Setup wizard to configure your server and download educational content collections perfect for your students.
+
+**[Run School Setup →](/easy-setup)**
+
+Or explore the **[Getting Started Guide](/docs/getting-started)** for a complete walkthrough of all educational features.
+
+---
+
+## Quick Links for Teachers
 
 | I want to... | Go here |
 |--------------|---------|
-| Chat with the AI | [AI Chat →](/chat) |
-| Upload documents for AI | [Knowledge Base →](/knowledge-base) |
-| Download more content | [Install Apps →](/settings/apps) |
-| Add Wikipedia/reference content | [Content Explorer →](/settings/zim/remote-explorer) |
-| Manage installed content | [Content Manager →](/settings/zim) |
-| Download map regions | [Maps Manager →](/settings/maps) |
-| Run a benchmark | [System Benchmark →](/settings/benchmark) |
-| Check for updates | [System Update →](/settings/update) |
-| View system status | [System Info →](/settings/system) |
+| Help students with homework | [AI Teaching Assistant →](/chat) |
+| Upload lesson materials | [Knowledge Base →](/knowledge-base) |
+| Install educational apps | [Install Learning Tools →](/settings/apps) |
+| Add textbooks and references | [Content Explorer →](/settings/zim/remote-explorer) |
+| Manage educational content | [Content Manager →](/settings/zim) |
+| Download map regions for geography | [Maps Manager →](/settings/maps) |
+| Check system performance | [System Info →](/settings/system) |
+| Update school server | [System Update →](/settings/update) |
 
 ---
 
-## Keeping Your Server Updated
+## School Resources
 
-N.O.M.A.D. works best when kept up to date while you have internet access. This ensures you have the latest:
-- Software features and bug fixes
-- Wikipedia and reference content
-- Educational materials
-- AI model improvements
+### 📚 [School Use Cases](/docs/school-use-cases)
+Discover how other schools are using INR99 Offline School Server to transform education in rural areas, after-school programs, and special education settings.
 
-When you go offline, you'll have everything you need — the last synced versions of all your content.
+### 💰 [Pricing Plans](/docs/pricing)
+Explore our affordable pricing options starting at ₹9,999 per school, with special discounts for rural schools and educational institutions.
 
-**[Check for Updates →](/settings/update)**
+### 🎓 [Teacher Guides](/docs/getting-started)
+Step-by-step guides for teachers to effectively integrate digital tools into their teaching practice.
+
+---
+
+## Keeping Your School Server Updated
+
+INR99 Offline School Server works best when kept up to date while you have internet access. This ensures your school has the latest:
+- Educational features and improvements
+- Wikipedia and textbook content
+- Learning materials and courses
+- AI teaching capabilities
+
+When you go offline, your school will have everything needed — the last synced versions of all educational content.
+
+**[Check for Updates →](/settings/update)]**

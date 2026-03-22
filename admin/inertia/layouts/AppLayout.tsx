@@ -25,8 +25,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         className="p-2 flex gap-2 flex-col items-center justify-center cursor-pointer"
         onClick={() => (window.location.href = '/home')}
       >
-        <img src="/project_nomad_logo.png" alt="Project Nomad Logo" className="h-40 w-40" />
-        <h1 className="text-5xl font-bold text-desert-green">Command Center</h1>
+        <img src="/inr99_school_server_logo.svg" alt="INR99 Offline School Server Logo" className="h-40 w-40" />
+        <h1 className="text-5xl font-bold text-blue-600">INR99 Offline School Server</h1>
+        <p className="text-lg text-gray-600 mt-2">Knowledge That Never Goes Offline</p>
       </div>
       <hr className={
         classNames(
