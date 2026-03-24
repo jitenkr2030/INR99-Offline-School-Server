@@ -1,0 +1,198 @@
+import {
+  IconBolt,
+  IconHelp,
+  IconMapRoute,
+  IconPlus,
+  IconSettings,
+  IconWifiOff,
+} from '@tabler/icons-react'
+import { Head, usePage } from '@inertiajs/react'
+import AppLayout from '~/layouts/AppLayout'
+import { getServiceLink } from '~/lib/navigation'
+import { ServiceSlim } from '../../types/services'
+import DynamicIcon, { DynamicIconName } from '~/components/DynamicIcon'
+import { useUpdateAvailable } from '~/hooks/useUpdateAvailable'
+import { useSystemSetting } from '~/hooks/useSystemSetting'
+import Alert from '~/components/Alert'
+import { SERVICE_NAMES } from '../../constants/service_names'
+
+// Maps is a Core Capability (display_order: 4)
+const MAPS_ITEM = {
+  label: 'Maps',
+  to: '/maps',
+  target: '',
+  description: 'View offline maps',
+  icon: <IconMapRoute size={48} />,
+  installed: true,
+  displayOrder: 4,
+  poweredBy: null,
+}
+
+// System items shown after all apps
+const SYSTEM_ITEMS = [
+  {
+    label: 'School Setup',
+    to: '/easy-setup',
+    target: '',
+    description:
+      'New to Offline School Server? Use our setup wizard to quickly configure your school\'s digital learning environment!',
+    icon: <IconBolt size={48} />,
+    installed: true,
+    displayOrder: 50,
+    poweredBy: null,
+  },
+  {
+    label: 'Install Learning Tools',
+    to: '/settings/apps',
+    target: '',
+    description: 'Add educational apps, digital libraries, and teaching tools to your school server!',
+    icon: <IconPlus size={48} />,
+    installed: true,
+    displayOrder: 51,
+    poweredBy: null,
+  },
+  {
+    label: 'Teacher Guides',
+    to: '/docs/home',
+    target: '',
+    description: 'Learn how to use Offline School Server for effective teaching and learning',
+    icon: <IconHelp size={48} />,
+    installed: true,
+    displayOrder: 52,
+    poweredBy: null,
+  },
+  {
+    label: 'School Settings',
+    to: '/settings/system',
+    target: '',
+    description: 'Configure your school server settings and manage user access',
+    icon: <IconSettings size={48} />,
+    installed: true,
+    displayOrder: 53,
+    poweredBy: null,
+  },
+]
+
+interface DashboardItem {
+  label: string
+  to: string
+  target: string
+  description: string
+  icon: React.ReactNode
+  installed: boolean
+  displayOrder: number
+  poweredBy: string | null
+}
+
+export default function Home(props: {
+  system: {
+    services: ServiceSlim[]
+  }
+}) {
+  const items: DashboardItem[] = []
+  const updateInfo = useUpdateAvailable();
+  const { aiAssistantName } = usePage<{ aiAssistantName: string }>().props
+
+  // Check if user has visited Easy Setup
+  const { data: easySetupVisited } = useSystemSetting({
+    key: 'ui.hasVisitedEasySetup'
+  })
+  const shouldHighlightEasySetup = easySetupVisited?.value ? String(easySetupVisited.value) !== 'true' : false
+
+  // Add installed services (non-dependency services only)
+  props.system.services
+    .filter((service) => service.installed && service.ui_location)
+    .forEach((service) => {
+      items.push({
+        // Inject custom AI Assistant name if this is the chat service
+        label: service.service_name === SERVICE_NAMES.OLLAMA && aiAssistantName ? aiAssistantName : (service.friendly_name || service.service_name),
+        to: service.ui_location ? getServiceLink(service.ui_location) : '#',
+        target: '_blank',
+        description:
+          service.description ||
+          `Access the ${service.friendly_name || service.service_name} application`,
+        icon: service.icon ? (
+          <DynamicIcon icon={service.icon as DynamicIconName} className="!size-12" />
+        ) : (
+          <IconWifiOff size={48} />
+        ),
+        installed: service.installed,
+        displayOrder: service.display_order ?? 100,
+        poweredBy: service.powered_by ?? null,
+      })
+    })
+
+  // Add Maps as a Core Capability
+  items.push(MAPS_ITEM)
+
+  // Add system items
+  items.push(...SYSTEM_ITEMS)
+
+  // Sort all items by display order
+  items.sort((a, b) => a.displayOrder - b.displayOrder)
+
+  return (
+    <AppLayout>
+      <Head title="School Dashboard" />
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 mx-4">
+        <div className="flex">
+          <div className="ml-3">
+            <p className="text-sm text-blue-700">
+              <strong>Welcome to your INR99 Offline School Server!</strong> Transform your school with 
+              digital learning that works without internet connectivity. Perfect for rural schools 
+              and areas with limited internet access.
+            </p>
+          </div>
+        </div>
+      </div>
+      {
+        updateInfo?.updateAvailable && (
+          <div className='flex justify-center items-center p-4 w-full'>
+            <Alert
+              title="An update is available for your INR99 Offline School Server!"
+              type="info-inverted"
+              variant="solid"
+              className="w-full"
+              buttonProps={{
+                variant: 'primary',
+                children: 'Go to Settings',
+                icon: 'IconSettings',
+                onClick: () => {
+                  window.location.href = '/settings/update'
+                },
+              }}
+            />
+          </div>
+        )
+      }
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        {items.map((item) => {
+          const isSchoolSetup = item.label === 'School Setup'
+          const shouldHighlight = isSchoolSetup && shouldHighlightEasySetup
+
+          return (
+            <a key={item.label} href={item.to} target={item.target}>
+              <div className="relative rounded border-blue-600 border-2 bg-blue-600 hover:bg-transparent hover:text-text-primary text-white transition-colors shadow-sm h-48 flex flex-col items-center justify-center cursor-pointer text-center px-4">
+                {shouldHighlight && (
+                  <span className="absolute top-2 right-2 flex items-center justify-center">
+                    <span
+                      className="animate-ping absolute inline-flex w-16 h-6 rounded-full bg-orange-400 opacity-75"
+                      style={{ animationDuration: '1.5s' }}
+                    ></span>
+                    <span className="relative inline-flex items-center rounded-full px-2.5 py-1 bg-orange-400 text-xs font-semibold text-white shadow-sm">
+                      Start here!
+                    </span>
+                  </span>
+                )}
+                <div className="flex items-center justify-center mb-2">{item.icon}</div>
+                <h3 className="font-bold text-2xl">{item.label}</h3>
+                {item.poweredBy && <p className="text-sm opacity-80">Powered by {item.poweredBy}</p>}
+                <p className="xl:text-lg mt-2">{item.description}</p>
+              </div>
+            </a>
+          )
+        })}
+      </div>
+    </AppLayout>
+  )
+}
